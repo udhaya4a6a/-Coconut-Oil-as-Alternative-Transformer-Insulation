@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Oil as Alternative Transformer Insulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .result-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .result-item:hover {
+            transform: scale(1.05);
+        }
+
+        .result-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .methodology {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .methodology h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .test-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .test-item {
+            background: linear-gradient(135deg, #a8e6cf, #7fcdcd);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #27ae60;
+        }
+
+        .test-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .conclusion {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .conclusion h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            background: linear-gradient(135deg, #ffd93d, #ff6b6b);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .university-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header animate-fade-in">
+            <h1>🥥 Coconut Oil as Alternative Transformer Insulation</h1>
+            <p>Sustainable and High-Performance Insulating Oil for Power Transformers</p>
+            <div class="team">
+                <div class="team-member">Udhaya S</div>
+                <div class="team-member">Arul Venus A</div>
+                <div class="team-member">Harshini R</div>
+            </div>
+            <div class="university-info">
+                <p><strong>SASTRA Deemed University</strong> | School of Electrical & Electronics Engineering</p>
+                <p>Bachelor of Technology - Electrical & Electronics Engineering | May 2025</p>
+            </div>
+        </div>
+
+        <div class="highlight animate-fade-in">
+            ⚡ Coconut oil demonstrates 13-22% higher breakdown strength compared to conventional mineral oil ⚡
+        </div>
+
+        <div class="content">
+            <div class="card animate-fade-in">
+                <h2><span class="icon">🔬</span>Project Overview</h2>
+                <p>This research evaluates coconut oil as an environmentally friendly alternative to conventional mineral oil in power transformers. The study focuses on comprehensive testing of physical, electrical, and chemical properties to validate coconut oil's performance and safety characteristics.</p>
+                <p style="margin-top: 15px;"><strong>Motivation:</strong> With growing environmental concerns and the need for sustainable solutions in power systems, natural ester oils like coconut oil offer biodegradable and eco-friendly alternatives to traditional mineral oils.</p>
+            </div>
+
+            <div class="card animate-fade-in">
+                <h2><span class="icon">🎯</span>Key Findings</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-value">13-22%</div>
+                        <div>Higher Breakdown Strength</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">238°C</div>
+                        <div>Flash Point</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">292°C</div>
+                        <div>Fire Point</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">✓</div>
+                        <div>Better Fire Safety</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="methodology animate-fade-in">
+            <h2>🔧 Testing Methodology</h2>
+            <p>Comprehensive testing was conducted using industry-standard equipment and procedures to ensure accurate and reliable results.</p>
+            
+            <div class="test-list">
+                <div class="test-item">
+                    <h3>Physical Properties</h3>
+                    <ul>
+                        <li>Flash & Fire Point (Pensky-Martens Apparatus)</li>
+                        <li>Viscosity Testing (Redwood Viscometer)</li>
+                        <li>Temperature variation studies</li>
+                    </ul>
+                </div>
+                <div class="test-item">
+                    <h3>Electrical Properties</h3>
+                    <ul>
+                        <li>Power Frequency AC Breakdown (50Hz)</li>
+                        <li>Lightning Impulse (1.2/50 μs)</li>
+                        <li>Switching Impulse (250/2500 μs)</li>
+                    </ul>
+                </div>
+                <div class="test-item">
+                    <h3>Electrode Configurations</h3>
+                    <ul>
+                        <li>Hemispherical (Uniform field)</li>
+                        <li>Pin-Plane (Non-uniform field)</li>
+                        <li>Various gap distances tested</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="conclusion animate-fade-in">
+            <h2>🌟 Conclusion & Impact</h2>
+            <p>This research demonstrates that coconut oil is a viable and superior alternative to conventional mineral oil for transformer insulation applications.</p>
+            
+            <div class="benefits">
+                <div class="benefit-item">Higher Dielectric Strength</div>
+                <div class="benefit-item">Better Fire Safety</div>
+                <div class="benefit-item">Environmentally Friendly</div>
+                <div class="benefit-item">Biodegradable</div>
+                <div class="benefit-item">Cost Effective</div>
+                <div class="benefit-item">Sustainable Solution</div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; color: white;">
+                <h3>Future Scope</h3>
+                <p>The addition of specific additives could further improve the pour point and viscosity characteristics of coconut oil, making it even more suitable for widespread adoption in power transformer applications.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .methodology, .conclusion').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects to result items
+        document.querySelectorAll('.result-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'scale(1.05) rotateY(5deg)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'scale(1) rotateY(0deg)';
+            });
+        });
+    </script>
+
+    <!-- Contact Section -->
+<div class="container animate-fade-in">
+    <div class="card" style="margin-top: 40px;">
+        <h2><span class="icon">📬</span>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, feel free to reach out to us!</p>
+        <form style="margin-top: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" placeholder="Your Name" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1em;">
+                <input type="email" placeholder="Your Email" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1em;">
+                <textarea placeholder="Your Message" rows="5" required style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-size: 1em;"></textarea>
+                <button type="submit" style="background: linear-gradient(45deg, #3498db, #e74c3c); color: white; border: none; padding: 12px; border-radius: 10px; font-size: 1em; cursor: pointer;">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
